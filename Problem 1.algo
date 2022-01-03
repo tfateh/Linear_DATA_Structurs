@@ -11,9 +11,9 @@ BEGIN
    read(tab[j]);
    END FOR
    
-   IF (i;=j) THEN
-       Sum:=tab[i]+TAB[j]
+   IF (i:=j) THEN
+       Sum:=tab[i]+TAB[j];
    ELSE
-       i++
+       i++;
    END_IF
 END
