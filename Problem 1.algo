@@ -2,7 +2,8 @@ ALGORITHM sum_of_all_distinct
 VAR
     tab:ARRAY_OF integer[];
     TAB:ARRAY_OF integer[];
-    i,j,Sum:integer;
+    i,j:integer;
+    Sum:integer:=0;
 BEGIN
    FOR i FROM 0 TO tab.length-1 DO 
    read(tab[i]);

@@ -1,0 +1,26 @@
+ALGORITHM sum_of_all_distinct     
+VAR
+    tab:ARRAY_OF integer[20];
+    TAB:ARRAY_OF integer[20];
+    Tab:ARRAY_OF integer[40];
+    dict := HASH_TABLE<INTEGER,INTEGER>;
+    i,j,count:integer;
+    Sum:integer:=0;
+BEGIN
+    FOR i FROM 0 to tab.length-1 STEP 1 DO
+    IF (dict.lookup(tab[i]) = TRUE) THEN
+            count := dict.get(tab[i]);
+            dict.insert(tab[i],count+1);
+        ELSE
+            dict.insert(tab[i],1);
+        END_IF
+    END_FOR
+    FOR j FROM 0 to TAB.length-1 STEP 1 DO
+    IF (dict.lookup(TAB[j]) = TRUE) THEN
+            count := dict.get(TAB[j]);
+            dict.insert(TAB[j],count+1);
+        ELSE
+            dict.insert(TAB[j],1);
+        END_IF
+    END_FOR
+END
